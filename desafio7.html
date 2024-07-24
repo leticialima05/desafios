@@ -7,7 +7,7 @@
     <button onclick="desconto()"> Iniciar a soma</button>
 
 
-    <section>
+    <section id="resultado">
         <p> O resultado é :</p>
     </section>
 
@@ -19,7 +19,7 @@
             let desc = n1-(n1*(n2/100));
 
             let res = document.getElementById('resultado')
-            res.innerHTML = `<p> O preço do produto cheio é R$ ${n1.toFixed(2)}, o desconto foi de ${n2.toFixed(1)} % resultando nopreço final de R$ ${desc.toFixed(2)} reais </p>`
+            res.innerHTML = `<p> O preço do produto cheio é R$ ${n1.toFixed(2)}, o desconto foi de ${n2.toFixed(1)} % resultando no preço final de R$ ${desc.toFixed(2)} reais </p>`
         }
     </script>
 </body>
