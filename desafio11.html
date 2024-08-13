@@ -15,14 +15,18 @@
     <script>
         function bhaskara() {
             let a = Number(window.prompt(`Qual é o valor de a?`))
-            let b= Number(window.prompt(`Qual é o valor de b?`))
+            let b = Number(window.prompt(`Qual é o valor de b?`))
             let c = Number(window.prompt(`Qual é o valor de c?`))
 
-            delta = (b*b-4*a*c) /4
-           
+            let delta = ((b*b)-(4*a*c))
+
+            let positivo = -b+(Math.sqrt(delta)/(2*a))
+            let negativo = -b-(Math.sqrt(delta)/(2*a))
 
             let res = document.getElementById('situacao')
             res.innerHTML = `<p>Calculando o resultado de bhaskara é de <mark>${delta} </mark>.</p>`
+            res.innerHTML += `<p>Calculando o resultado de positivo é de <mark>${positivo} </mark>.</p>`
+            res.innerHTML += `<p>Calculando o resultado de negativo é de <mark>${negativo} </mark>.</p>`
         }
     </script>
 </body>
