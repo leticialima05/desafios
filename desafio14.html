@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula </title>
+</head>
+<body>
+    <h1>Calcule a media do aluno</h1>
+    <button onclick="validar()">Média</button>
+
+    <section id="resultado">
+        <p>O resultado é:</p>
+    </section>
+
+    <script>
+        function validar() {
+            cont= 1;
+            var media = 0;
+            let nome = window.prompt('qual é o seu nome?')
+
+            while (cont <= 3) {
+                var notas = parseFloat(prompt(`qual a nota ${cont}?`))
+                media=media+notas;
+                cont ++
+            }
+            media=media/4
+
+            if (media >=60) {
+                result = "aprovado"
+            } else {
+                result = "reprovado"
+            }
+        
+            let res = document.getElementById('resultado');
+            innerHTML=(`o aluno ${nome}, tem a media ${media}, e esta ${result}`);
+
+        }
+
+    </script>
+</body>
+<footer>
+    <style>
+        footer{ bottom: 0; position: fixed; width: 100%; text-align: left;}
+    </style>
+
+</footer>
+</html>
