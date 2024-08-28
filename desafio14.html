@@ -23,7 +23,7 @@
     <script>
         function calcularMedia() {
 
-            let nom = window.prompt('Qual é o nome do aluno?')
+            let nome = window.prompt('Qual é o nome do aluno?')
             let nota1 = Number(window.prompt('Digite a nota 1:'));
             let nota2 = Number(window.prompt('Digite a nota 2:'));
             let nota3 = Number(window.prompt('Digite a nota 3:'));
@@ -44,7 +44,7 @@
 
             
             let res = document.getElementById('resultado');
-            res.innerHTML = `<p>A média do aluno ${nom} e a média é ${media.toFixed(2)}. Situação: ${situacao}.</p>`;
+            res.innerHTML = `<p>Olá, ${nome} sua média é ${media.toFixed(2)} e sua Situação é: ${situacao}.</p>`;
         }
     </script>
 </body>
