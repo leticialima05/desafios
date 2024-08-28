@@ -8,11 +8,11 @@
     <button onclick="validar()">Lançe as notas</button>
     <script>
         function validar() {
-            cont = 1;
+            cont=1;
             var media = 0;
             let nome = window.prompt('Qual é o seu nome?')
 
-            while (cony <= 4) {
+            while (cont <= 4) {
                 var notas = parseFloat(prompt(`Qual a nota ${cont}?`))
                 media=media+notas;
                 cont ++
