@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Página Criada pela IA</title>
+    <title>Galeria de Fotos</title>
     <link rel="stylesheet" href="desafio3IA.css">
 </head>
 <body>
-    <h1 class="titulo">Página Criada pela IA</h1>
+    <h1 class="titulo">Página criada pela IA</h1>
 
     <div class="galeria">
-        <img src="download.png(2)" alt="Imagem 1">
-        <img src="download.png" alt="Imagem 2">
-        <img src="download.png(1)" alt="Imagem 3">
+        <img src="download.png" alt="Foto 1" class="thumbnail" onclick="abrirImagem(0)">
+        <img src="download(1).png" alt="Foto 2" class="thumbnail" onclick="abrirImagem(1)">
+        <img src="download(2).png" alt="Foto 3" class="thumbnail" onclick="abrirImagem(2)">
     </div>
 
-    <div class="texto">
-        <p>Coluna 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <p>Coluna 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <p>Coluna 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="modal" id="myModal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
     </div>
+
+    <div class="hino">
+        <p>Ouviram do Ipiranga às margens plácidas...</p>
+        </div>
 
     <footer>
-        &copy; Todos os direitos reservados.
+        <p>© Todos os direitos reservados. <span id="data"></span></p>
     </footer>
 
     <script src="desafio3IA.js"></script>
