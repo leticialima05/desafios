@@ -1,41 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Cadastro</title>
+    <title>Formulário de Pesquisa</title>
     <link rel="stylesheet" href="desafio1IA.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Formulário de Cadastro</h1>
-        <form id="cadastroForm">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+    <form id="formPesquisa">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
 
-            <label for="escolaridade">Escolaridade:</label>
-            <select id="escolaridade" name="escolaridade" required>
-                <option value="ensino-fundamental">Ensino Fundamental</option>
-                <option value="ensino-medio">Ensino Médio</option>
-                <option value="superior">Superior</option>
-            </select>
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
 
-            <label for="contato">Contato:</label>
-            <input type="tel" id="contato" name="contato" required>
+        <label for="escolaridade">Escolaridade:</label>
+        <input type="text" id="escolaridade" name="escolaridade" required>
 
-            <label for="cidade">Cidade:</label>
-            <input type="text" id="cidade" name="cidade" required>
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required>
 
-            <label for="sexo">Sexo:</label>
-            <select id="sexo" name="sexo" required>
-                <option value="masculino">Masculino</option>
-                <option value="feminino">Feminino</option>
-            </select>
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+        </select>
 
-            <button type="submit">Cadastrar</button>
-        </form>
-        <div id="mensagem"></div>
-    </div>
+        <button type="submit">Enviar</button>
+    </form>
+    <div id="mensagem"></div>
+
     <script src="desafio1IA.js"></script>
 </body>
 </html>
