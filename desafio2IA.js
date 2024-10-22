@@ -2,7 +2,7 @@ const imagem = document.getElementById('imagem');
 const proximoBtn = document.getElementById('proximo');
 const anteriorBtn = document.getElementById('anterior');
 
-let imagens = ['morris.webp', 'taaça.jpeg', 'rosto.jpeg']; // Adicione mais imagens aqui
+let imagens = ['morris.webp', 'taça.jpeg', 'rosto.jpeg']; // Adicione mais imagens aqui
 let indiceImagem = 0;
 
 proximoBtn.addEventListener('click', () => {
