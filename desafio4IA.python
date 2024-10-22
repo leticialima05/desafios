@@ -1,0 +1,11 @@
+saldo_inicial = float(input("Digite o saldo inicial: "))
+taxa_juros = float(input("Digite a taxa de juros mensal: ")) / 100
+pagamento_mensal = float(input("Digite o pagamento mensal: "))
+num_meses = int(input("Digite o número de meses: "))
+
+saldo_atual = saldo_inicial
+for mes in range(num_meses):
+    juros = saldo_atual * taxa_juros
+    saldo_atual += juros - pagamento_mensal
+
+print("Saldo final após", num_meses, "meses:", saldo_atual)
