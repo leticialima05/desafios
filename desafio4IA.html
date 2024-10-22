@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Divida de Cartao</title>
+  <link rel="stylesheet" href="desafio4IA.css">
+</head>
+<body>
+  <h1>Calculadora de Dívida de Cartão</h1>
+  <form id="dividaForm">
+    <label for="valorDivida">Valor da Dívida:</label>
+    <input type="number" id="valorDivida" required>
+    <label for="mesesAtraso">Meses de Atraso:</label>
+    <input type="number" id="mesesAtraso" required>
+    <label for="taxaJuros">Taxa de Juros Mensal (%):</label>
+    <input type="number" id="taxaJuros" required>
+    <button type="button" onclick="calcularDivida()">Calcular</button>
+  </form>
+  <p id="resultado"></p>
+  <script src="desafio4IA.js"></script>
+</body>
+</html>
