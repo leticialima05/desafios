@@ -1,0 +1,20 @@
+.container {
+    text-align: center;
+    background: linear-gradient(to right, black, orange, green);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+  }
+  
+
+  .image:not(.active) {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
