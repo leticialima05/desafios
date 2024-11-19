@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculo de Folha de Pagamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #800080, #ffffff); /* Degradê roxo e branco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculo de Folha de Pagamento</h1>
+        <img src="sua_logo.png" alt="Sua Logo" class="logo"> <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+
+        <label for="salarioBruto">Salario Bruto:</label>
+        <input type="number" id="salarioBruto" name="salarioBruto">
+
+        <button onclick="calcular()">Calcular</button>
+
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function calcular() {
+            const nome = document.getElementById('nome').value;
+            const salarioBruto = parseFloat(document.getElementById('salarioBruto').value);
+            const resultado = document.getElementById('resultado');
+
+            let aliquota;
+            if (salarioBruto > 5000) {
+                aliquota = 0.175;
+            } else if (salarioBruto > 4000) {
+                aliquota = 0.12;
+            } else if (salarioBruto > 3000) {
+                aliquota = 0.075;
+            } else if (salarioBruto > 1800) {
+                aliquota = 0.035;
+            } else {
+                aliquota = 0;
+            }
+
+            const impostoDeRenda = salarioBruto * aliquota;
+            const salarioLiquido = salarioBruto - impostoDeRenda;
+
+            resultado.textContent = `Olá, ${nome}! Seu salário líquido é R$ ${salarioLiquido.toFixed(2)}.`;
+        }
+    </script>
+</body>
+</html>
