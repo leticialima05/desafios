@@ -1,10 +1,15 @@
-const imagens = document.querySelectorAll('.galeria img');
+const imagens = document.querySelectorAll('.imagem');
+const modal = document.getElementById('modal');
+const imagemGrande = document.querySelector('.imagem-grande');
+const fechar = document.querySelector('.fechar');
 
-imagens.forEach(imagem => {
-    imagem.addEventListener('click', () => {
-        imagem.style.width = '300px';
-        imagem.style.height = '300px';
-        imagem.style.borderRadius = '20px';
-        imagem.style.margin = '20px auto';
-    });
+imagens.forEach((imagem) => {
+	imagem.addEventListener('click', () => {
+		modal.style.display = 'flex';
+		imagemGrande.src = imagem.src;
+	});
+});
+
+fechar.addEventListener('click', () => {
+	modal.style.display = 'none';
 });
