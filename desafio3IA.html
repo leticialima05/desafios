@@ -1,31 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Galeria de Fotos</title>
-    <link rel="stylesheet" href="desafio3IA.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pagina criada pela IA</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="titulo">Página criada pela IA</h1>
+	<div class="container">
+		<h1 class="titulo">Pagina criada pela IA</h1>
+		<div class="galeria">
+			<img src="img1.jpg" alt="Imagem 1" class="imagem">
+			<img src="img2.jpg" alt="Imagem 2" class="imagem">
+			<img src="img3.jpg" alt="Imagem 3" class="imagem">
+			<!-- Adicione mais imagens aqui -->
+		</div>
+		<div class="modal" id="modal">
+			<img src="" alt="" class="imagem-grande">
+			<button class="fechar">Fechar</button>
+		</div>
+		<div class="texto">
+			<div class="coluna">
+				<p>Ouviram do Ipiranga as margens plácidas...</p>
+			</div>
+			<div class="coluna">
+				<p>De um povo heroico o brado retumbante...</p>
+			</div>
+			<div class="coluna">
+				<p>E o sol da liberdade, em raios fúlgidos...</p>
+			</div>
+		</div>
+		<footer>
+			<p>&copy; Todos direitos reservados. <?php echo date('d/m/Y'); ?></p>
+		</footer>
+	</div>
 
-    <div class="galeria">
-        <img src="download.png" alt="Foto 1" class="thumbnail" onclick="abrirImagem(0)">
-        <img src="download(1).png" alt="Foto 2" class="thumbnail" onclick="abrirImagem(1)">
-        <img src="download(2).png" alt="Foto 3" class="thumbnail" onclick="abrirImagem(2)">
-    </div>
-
-    <div class="modal" id="myModal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-    </div>
-
-    <div class="hino">
-        <p>Ouviram do Ipiranga às margens plácidas...</p>
-        </div>
-
-    <footer>
-        <p>© Todos os direitos reservados. <span id="data"></span></p>
-    </footer>
-
-    <script src="desafio3IA.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
