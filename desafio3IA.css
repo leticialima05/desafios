@@ -1,70 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #556B2F, #ffd700);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
+	background: linear-gradient(to bottom, #3E8E41, #F8E231);
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	max-width: 800px;
+	margin: 40px auto;
+	text-align: center;
 }
 
 .titulo {
-    font-size: 26px;
-    margin-bottom: 20px;
+	font-size: 26px;
+	margin-bottom: 20px;
 }
 
 .galeria {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.thumbnail {
-    width: 100px;
-    height: 100px;
-    border-radius: 5px;
-    cursor: pointer;
+.imagem {
+	width: 150px;
+	height: 150px;
+	margin: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: transform 0.2s;
+}
+
+.imagem:hover {
+	transform: scale(1.1);
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+	justify-content: center;
+	align-items: center;
 }
 
-.modal-content {
-    margin: 15% auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    border-radius: 10px;
+.imagem-grande {
+	max-width: 80%;
+	max-height: 80%;
+	border-radius: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.close {
-    color: white;
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
+.fechar {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: #fff;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
 }
 
-.hino {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 80%;
-    margin-bottom: 20px;
+.texto {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+
+.coluna {
+	width: 30%;
 }
 
 footer {
-    text-align: center;
+	margin-top: 40px;
+	color: #666;
 }
