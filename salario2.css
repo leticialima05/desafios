@@ -1,18 +1,28 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #8a2be2, #ffffff);
+    text-align: center;
 }
 
 table {
+    margin: 20px auto;
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
 }
 
 th, td {
+    padding: 15px;
     text-align: left;
-    padding: 8px;
+    border-bottom: 1px solid #ddd;
 }
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #e0bfff; /* Roxo claro */
+}
+
+.form-container {
+    margin-bottom: 20px;
 }
