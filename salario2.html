@@ -53,7 +53,8 @@
     <script>
         const tabela = document.getElementById('tabela');
 
-        function calcularImposto(salario) {
+        function calcularImposto(salario) 
+        {
             if (salario > 5000) {
                 return salario * 0.175;
             } else if (salario > 4000) {
@@ -67,7 +68,8 @@
             }
         }
 
-        function adicionarFuncionario() {
+        function adicionarFuncionario() 
+        {
             const nome = document.getElementById('nome').value;
             const salarioBruto = parseFloat(document.getElementById('salario').value);
             const imposto = calcularImposto(salarioBruto);
@@ -78,12 +80,18 @@
             novaLinha.insertCell().textContent = salarioBruto.toFixed(2);
             novaLinha.insertCell().textContent = imposto.toFixed(2);
             novaLinha.insertCell().textContent = salarioLiquido.toFixed(2);
+
+            document.getElementById('nome').value = '';
+            document.getElementById('salario').value = '';
+
+            document.getElementById('nome').value = '';
+            document.getElementById('salario').value = '';
+            document.getElementById('nome').focus();
         }
 
         // Limpar os campos após adicionar o funcionário
-        document.getElementById('nome').value = '';
-        document.getElementById('salario').value = '';
-    }
+
+    
         
     </script>
 </body>
