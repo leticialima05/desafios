@@ -3,11 +3,11 @@
 <head>
     <title>Folha de Pagamento</title>
     <style>
-        body {
+           body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom right, #800080, #ffffff);
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             height: 100vh;
             margin: 0;
@@ -16,6 +16,7 @@
         table {
             border-collapse: collapse;
             width: 80%;
+            margin-top: 20px;
         }
 
         th, td {
@@ -26,6 +27,23 @@
 
         tr:nth-child(even) {
             background-color: #f2f2f2;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;  
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        label {
+            margin-right: 10px;
         }
     </style>
 </head>
