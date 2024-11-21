@@ -48,7 +48,7 @@
         </tr>
     </table>
 
-    <script src="salario2.js">
+    <script>
         const tabela = document.getElementById('tabela');
 
         function calcularImposto(salario) {
@@ -77,15 +77,7 @@
             novaLinha.insertCell().textContent = imposto.toFixed(2);
             novaLinha.insertCell().textContent = salarioLiquido.toFixed(2);
         }
-
-        // Limpando os campos
-        limparCampos();
-        }
-
-       function limparCampos() {
-          document.getElementById("nome").value = "";
-          document.getElementById("salario").value = "";
-       }
+        
     </script>
 </body>
 </html>
