@@ -78,6 +78,12 @@
             novaLinha.insertCell().textContent = imposto.toFixed(2);
             novaLinha.insertCell().textContent = salarioLiquido.toFixed(2);
         }
+
+        function limparCampos() {
+            document.getElementById("nome").value = "";
+            document.getElementById("salario").value = "";
+        }
+        
     </script>
 </body>
 </html>
