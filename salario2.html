@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Folha de Pagamento</title>
-    <link rel="stylesheet" href="salario2.css">
+    <title>Planilha de Pagamento</title>
+    <link rel="stylesheet" href="desafio2.css">
 </head>
 <body>
-    <h1>Folha de Pagamento</h1>
+    <h1>Planilha de Pagamento</h1>
+
     <div class="form-container">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome">
-        <label for="salario">Salário:</label>
+
+        <label for="salario">Salario Bruto:</label>
         <input type="number" id="salario" name="salario">
+
         <button onclick="calcular()">Calcular</button>
     </div>
-    <table id="tabela">
+
+    <table id="tabela-pagamento">
         <thead>
             <tr>
                 <th>Nome</th>
-                <th>Salário Bruto</th>
+                <th>Salario Bruto</th>
                 <th>Imposto de Renda</th>
-                <th>Salário Líquido</th>
+                <th>Salario Liquido</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="corpo-tabela">
         </tbody>
     </table>
-    <script src="salario2.js"></script>
+
+    <script src="desafio2.js"></script>
 </body>
 </html>
