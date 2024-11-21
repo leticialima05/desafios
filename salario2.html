@@ -4,24 +4,41 @@
     <title>Folha de Pagamento</title>
     <style>
         body {
-            background: linear-gradient(to bottom, #800080, #ffffff);
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #800080, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        table, th, td {
-            border: 1px solid black;
+
+        table {
             border-collapse: collapse;
+            width: 80%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
     <h1>Folha de Pagamento</h1>
 
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome">
-
-    <label for="salario">Salário Bruto:</label>
-    <input type="number" id="salario" name="salario">
-
-    <button onclick="calcular()">Calcular</button>
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome">
+        <label for="salario">Salário Bruto:</label>
+        <input type="number" id="salario">
+        <button onclick="adicionarFuncionario()">Adicionar</button>
+    </div>
 
     <table id="tabela">
         <tr>
@@ -33,39 +50,44 @@
     </table>
 
     <script>
-        function calcular() {
+        const tabela = document.getElementById('tabela');
+
+        function calcularImposto(salario) {
+            if (salario > 5000) {
+                return salario * 0.175;
+            } else if (salario > 4000) {
+                return salario * 0.12;
+            } else if (salario > 3000) {
+                return salario * 0.075;
+            } else if (salario > 1800) {
+                return salario * 0.035;
+            } else {
+                return 0;
+            }
+        }
+
+        function adicionarFuncionario() {
             const nome = document.getElementById('nome').value;
             const salarioBruto = parseFloat(document.getElementById('salario').value);
-
-            let imposto = 0;
-            if (salarioBruto > 5000) {
-                imposto = salarioBruto * 0.175;
-            } else if (salarioBruto > 4000) {
-                imposto = salarioBruto * 0.12;
-            } else if (salarioBruto > 3000) {
-                imposto = salarioBruto * 0.075;
-            } else if (salarioBruto > 1800) {
-                imposto = salarioBruto * 0.035;
-            }
-
+            const imposto = calcularImposto(salarioBruto);
             const salarioLiquido = salarioBruto - imposto;
 
-            const tabela = document.getElementById('tabela');
             const novaLinha = tabela.insertRow();
-            const celulaNome = novaLinha.insertCell();
-            const celulaSalarioBruto = novaLinha.insertCell();
-            const celulaImposto = novaLinha.insertCell();
-            const celulaSalarioLiquido = novaLinha.insertCell();
-
-            celulaNome.textContent = nome;
-            celulaSalarioBruto.textContent = `R$ ${salarioBruto.toFixed(2)}`;
-            celulaImposto.textContent = `R$ ${imposto.toFixed(2)}`;
-            celulaSalarioLiquido.textContent = `R$ ${salarioLiquido.toFixed(2)}`;
-
-            // Limpando os campos
-            document.getElementById('nome').value = '';
-            document.getElementById('salario').value = '';
+            novaLinha.insertCell().textContent = nome;
+            novaLinha.insertCell().textContent = salarioBruto.toFixed(2);
+            novaLinha.insertCell().textContent = imposto.toFixed(2);
+            novaLinha.insertCell().textContent = salarioLiquido.toFixed(2);
         }
+
+        // Limpando os campos
+        limparCampos();
+    }
+
+    function limparCampos() {
+        document.getElementById("nome").value = "";
+        document.getElementById("salario").value = "";
+    }
+        
     </script>
 </body>
 </html>
