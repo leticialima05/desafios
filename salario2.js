@@ -2,7 +2,7 @@ function calcular() {
     const nome = document.getElementById('nome').value;
     const salarioBruto = parseFloat(document.getElementById('salario').value);
 
-    // Calcula o imposto de renda baseado nas faixas salariais
+    // Cálculo do imposto de renda
     let imposto = 0;
     if (salarioBruto > 5000) {
         imposto = salarioBruto * 0.175;
@@ -16,20 +16,15 @@ function calcular() {
 
     const salarioLiquido = salarioBruto - imposto;
 
-    // Adiciona uma nova linha à tabela
-    const tabela = document.getElementById('tabela').getElementsByTagName('tbody')[0];
+    // Adicionar linha na tabela
+    const tabela = document.getElementById('corpo-tabela');
     const novaLinha = tabela.insertRow();
-    const celulaNome = novaLinha.insertCell(0);
-    const celulaSalarioBruto = novaLinha.insertCell(1);
-    const celulaImposto = novaLinha.insertCell(2);
-    const celulaSalarioLiquido = novaLinha.insertCell(3);
+    novaLinha.insertCell(0).textContent = nome;
+    novaLinha.insertCell(1).textContent = salarioBruto.toFixed(2);
+    novaLinha.insertCell(2).textContent = imposto.toFixed(2);
+    novaLinha.insertCell(3).textContent = salarioLiquido.toFixed(2);
 
-    celulaNome.textContent = nome;
-    celulaSalarioBruto.textContent = salarioBruto.toFixed(2);
-    celulaImposto.textContent = imposto.toFixed(2);
-    celulaSalarioLiquido.textContent = salarioLiquido.toFixed(2);
-
-    // Limpa os campos de nome e salário
+    // Limpar campos de entrada
     document.getElementById('nome').value = '';
     document.getElementById('salario').value = '';
 }
